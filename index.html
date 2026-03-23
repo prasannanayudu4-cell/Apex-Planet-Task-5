@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>My Web App</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#todo">To-Do</a>
+        <a href="#products">Products</a>
+    </nav>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a web developer showcasing my final project.</p>
+</section>
+
+<!-- TODO -->
+<section id="todo">
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <h2>Products</h2>
+
+    <select onchange="filterProducts(this.value)">
+        <option value="all">All</option>
+        <option value="low">Below ₹500</option>
+        <option value="high">Above ₹500</option>
+    </select>
+
+    <button onclick="sortProducts()">Sort Price</button>
+
+    <ul id="productList"></ul>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
